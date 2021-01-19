@@ -19,12 +19,10 @@ public class Main {
         int healthPotionsAmount = 30;
         int healthPotionsDropChance = 50; //Percentage
 
-        boolean isRunning = true;
-
         System.out.println("Welcome to the Dungeon");
 
         GAME:
-            while (isRunning) {
+            while (true) {
                 System.out.println("---------------------------------------------------------------------------------");
                 int enemyHealth = random.nextInt(maxEnemyHealth);
                 String enemy = enemies[random.nextInt(enemies.length)];
@@ -100,7 +98,7 @@ public class Main {
 
                 if (input.equals("1")) {
                     System.out.println("You continue on your adventure");
-                } else if (input.equals("2")) {
+                } else {
                     System.out.println("You exit the dungeon from your adventures!");
                     break;
                 }
